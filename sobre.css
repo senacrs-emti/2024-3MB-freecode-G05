@@ -1,0 +1,125 @@
+/* Reseta margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-y: scroll; /* Mantém a capacidade de rolar */
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
+}
+ 
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+ 
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+ 
+nav ul li {
+    margin: 0 15px;
+}
+ 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+ 
+/* Seção "QUEM SOMOS" */
+.hero {
+    background-color: #5AB9EA; /* Cor de fundo temporária */
+    text-align: center;
+    color: #fff;
+    height: 100vh; /* Ocupa 60% da altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.hero h1 {
+    font-size: 4em;
+}
+ 
+/* Conteúdo principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+ 
+.text-side {
+    background-color: #17335b;
+    color: #fff;
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ 
+.text-side h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+ 
+.text-side p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+ 
+.image-side {
+    background-color: #264653;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas por linha */
+    gap: 20px;
+    padding: 20px;
+}
+ 
+.image-box {
+    background-color: #333;
+    color: #fff;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ 
+/* Responsividade */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+    }
+ 
+    .text-side, .image-side {
+        width: 50%;
+        height: auto;
+    }
+ 
+    .text-side {
+        padding: 60px;
+        text-align: left;
+    }
+ 
+    .hero h1 {
+        font-size: 5em;
+    }
+}
+ 
+@media (min-width: 992px) {
+    .image-box {
+        height: 250px;
+    }
+}
