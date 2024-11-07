@@ -16,37 +16,16 @@ body::-webkit-scrollbar {
     display: none; /* Chrome, Safari e Edge */
 }
  
-header {
-    background-color: #333;
-    padding: 10px 0;
-}
- 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
- 
-nav ul li {
-    margin: 0 15px;
-}
- 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
- 
 /* Seção "QUEM SOMOS" */
 .hero {
     background-color: #5AB9EA; /* Cor de fundo temporária */
     text-align: center;
     color: #fff;
-    height: 100vh; /* Ocupa 60% da altura da tela */
+    height: 90vh; /* Ocupa 60% da altura da tela */
     display: flex;
     align-items: center;
     justify-content: center;
 }
- 
 .hero h1 {
     font-size: 4em;
 }
@@ -55,7 +34,7 @@ nav ul li a {
 .content {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 60vh;
 }
  
 .text-side {
@@ -77,6 +56,22 @@ nav ul li a {
 .text-side p {
     margin: 10px 0;
     font-size: 1.1em;
+}
+
+#IMG1{
+    background-image: url("./img/download.jfif");
+}
+#IMG2{
+    background-image: url("./img/Lucas.jfif");
+}
+#IMG3{
+    background-image: url("./img/santana.jfif");
+}
+#IMG4{
+    background-image: url("./img/download.jfif");
+}
+#IMG5{
+    background-image: url("./img/noss.jpg");
 }
  
 .image-side {

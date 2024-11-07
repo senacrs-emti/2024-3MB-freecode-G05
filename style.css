@@ -10,10 +10,14 @@ body, html {
     margin: 0;
     padding: 0;
 }
+#botaologin{
+    background-color: #00AEEF;
+    color: black;
+}
 
 .header {
     background-color: #17345c;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,4 +127,40 @@ body, html {
 
 .navbar a:hover, .navbar a.active{
     color: #0046C4;
+}
+
+.footer {
+    background-color: #1A3C6B; /* Tom de azul */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-nav {
+    margin-top: 10px;
+}
+
+.footer-nav a {
+    color: #B0C4DE; /* Tom claro para links */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #FFFFFF; /* Cor de destaque ao passar o mouse */
 }

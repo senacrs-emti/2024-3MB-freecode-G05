@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPark - Cadastro e Login</title>
     <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">iPark</div>
-        <div class="search">
-            <input type="text" placeholder="Descubra locais com iPark">
-            <button>🔍</button>
+        <div class="search-container">
+            <input type="text" placeholder="Descubra locais com iPark" class="search-bar">
+            <button class="search-button">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
         </div>
-        <nav>
-            <a href="#">Como Funciona</a>
-            <a href="#">Equipe</a>
-            <a href="#">Sobre o Projeto</a>
-            <a href="#" class="login-button">Login ➔</a>
+        <nav class="navbar">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="equipe.html">Equipe</a>
+            <a href="#">Serviços</a>
+            <a href="cadastro.html" id="botaologin">Login</a>
         </nav>
     </header>
     <main>
@@ -42,4 +45,15 @@
         </div>
     </main>
 </body>
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 iPark - Todos os direitos reservados</p>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Serviço</a>
+            <a href="#">Contato</a>
+        </nav>
+    </div>
+</footer>
+
 </html>

@@ -10,20 +10,6 @@ html, body {
     background-color: #f0f0f0;
 }
 
-header {
-    background-color: #0c3c6b;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    height: 60px;
-    z-index: 1;
-}
-
 .logo {
     font-size: 1.5em;
     font-weight: bold;
@@ -74,7 +60,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #0b345a;
+    background-color: #223e64;
     padding-top: 60px;
     box-sizing: border-box;
 }
