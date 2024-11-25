@@ -1,0 +1,101 @@
+
+/* Descrição do Projeto */
+
+#video-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+.video-container p {
+    font-size: 18px;
+    color: #555;
+}
+
+#project-description {
+    padding: 40px;
+    background-color: #2b4a7e;
+    text-align: center;
+    color: white;
+}
+
+#project-description h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#project-description p {
+    font-size: 18px;
+    color: white;
+}
+
+/* Funcionalidades */
+#features {
+    padding: 40px;
+    background-color: #2b4a7e;
+}
+
+#features h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    background-color: #506d9f;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    text-align: center;
+    width: 180px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.feature-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Tecnologias Utilizadas */
+#technologies {
+    padding: 40px;
+    background-color: #2b4a7e;
+    text-align: center;
+}
+
+#technologies h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.tech-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tech-list img {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,177 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #223e64;
+    color: #333;
+}
+
+.header {
+    background-color: #17345c;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.header .logo {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: #333; /* Cinza escuro */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+    background-color: #444; 
+}
+
+#video-section {
+    background-color: #2b4a7e; 
+    padding: 20px;
+    text-align: center; 
+}
+.video-container {
+    background-color: #77afda; 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+video {
+    width: 100%; 
+    max-width: 800px; 
+    border-radius: 8px; 
+}
+
+
+.video-container p {
+    font-size: 18px;
+}
+
+/* Descrição do Projeto */
+#project-description {
+    padding: 40px;
+    background-color: #2b4a7e;
+    text-align: center;
+    color: white;
+}
+
+#project-description h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#project-description p {
+    font-size: 18px;
+    color: white;
+}
+
+/* Funcionalidades */
+#features {
+    padding: 40px;
+    background-color: #2b4a7e;
+}
+
+#features h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    background-color: #506d9f;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    text-align: center;
+    width: 180px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.feature-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Tecnologias Utilizadas */
+#technologies {
+    padding: 40px;
+    background-color: #2b4a7e;
+    text-align: center;
+}
+
+#technologies h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.tech-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tech-list img {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+.footer {
+    background-color: #2b4a7e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}

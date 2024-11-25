@@ -15,6 +15,36 @@ body {
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari e Edge */
 }
+
+.header {
+    background-color: #17345c;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.header .logo {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: #333; /* Cinza escuro */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+    background-color: #444; 
+}
  
 /* Seção "QUEM SOMOS" */
 .hero {

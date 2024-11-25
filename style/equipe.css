@@ -1,21 +1,9 @@
-/* Reseta margens e paddings */
+
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
- 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    overflow-y: scroll; /* Mantém a capacidade de rolar */
-    scrollbar-width: none; /* Firefox */
+    margin: 0;
 }
 
-body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari e Edge */
-}
- 
 /* Seção "QUEM SOMOS" */
 .hero {
     background-color: #5AB9EA; /* Cor de fundo temporária */
@@ -30,7 +18,6 @@ body::-webkit-scrollbar {
     font-size: 4em;
 }
 
- 
 /* Conteúdo principal */
 .content {
     display: flex;
