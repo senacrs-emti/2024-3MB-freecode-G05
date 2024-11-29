@@ -7,7 +7,7 @@
             </button>
         </div>
         <nav class="navbar">
-            <a href="index.php" class="active">Inicio</a>
+            <a href="index.php">Inicio</a>
             <a href="equipe.php">Equipe</a>
             <a href="projeto.php">Projeto</a>
             <a href="cadastro.php"id="botaocadastro">Cadastro</a>

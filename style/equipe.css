@@ -59,7 +59,10 @@
     background-image: url("./img/download.jfif");
 }
 #IMG5{
-    background-image: url("./img/noss.jpg");
+    background-image: url("../img/grupo.jpg");
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size: cover; 
 }
  
 .image-side {

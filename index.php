@@ -1,12 +1,15 @@
+<?php
+include_once './_inicializacao.php';
+?>
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPark - Estacione do Seu Jeito</title>
-    <link rel="stylesheet" href="style/style.css?t=<?php echo date('YmdHis').rand(0,999999);?>">
-    <link rel="stylesheet" href="style/home.css?t=<?php echo date('YmdHis').rand(0,999999);?>">
+    <link rel="stylesheet" href="style/style.css?t=<?php echo date('YmdHis') . rand(0, 999999); ?>">
 </head>
 <?php include 'includes/header.php'; ?>
 <body>
@@ -22,13 +25,12 @@
             <h1>ESTACIONE</h1>
         </div>
         <div id="textoIp">
-        <h1 >IPARK</h1>
+            <h1>IPARK</h1>
         </div>
         <div id="text-overlay">
             <h1>DO SEU JEITO</h1>
         </div>
     </main>
 </body>
-
 <?php include 'includes/footer.php'; ?>
 </html>

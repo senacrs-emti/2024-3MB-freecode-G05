@@ -1,0 +1,141 @@
+
+.main {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    background-color: #1A3C6b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+}  
+
+/* Título */
+h1 {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #00d9ff;
+    text-shadow: 0px 0px 8px #00d9ff;
+    text-align: center;
+}
+
+/* Painel de vagas */
+.painel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 90%;
+    /* max-width: 1200px; */
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+/* Cartão de vaga */
+.vaga {
+    background: linear-gradient(145deg, #1c4a7e, #0f2b4a);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 217, 255, 0.5);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vaga:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 217, 255, 0.7);
+}
+
+/* Diferenciação por status */
+.vaga.livre {
+    border: 3px solid #4caf50;
+    /* Verde para vagas livres */
+}
+
+.vaga.ocupado {
+    border: 3px solid #e74c3c;
+    /* Vermelho para vagas ocupadas */
+}
+
+/* Efeito de iluminação ao hover */
+.vaga::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.vaga:hover::before {
+    opacity: 1;
+}
+
+/* Conteúdo interno da vaga */
+.icone {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00d9ff;
+    text-shadow: 0px 0px 5px #00d9ff;
+}
+
+.status {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.vaga.livre .status {
+    color: #4caf50;
+}
+
+.vaga.ocupado .status {
+    color: #e74c3c;
+}
+
+/* Animação */
+.vaga {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .vaga {
+        padding: 15px;
+    }
+}
+

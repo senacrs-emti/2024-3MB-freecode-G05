@@ -4,7 +4,7 @@ require 'bd/db.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome_usuario = $_POST['nome_usuario'];
     $email = $_POST['email'];
-    $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
+    $senha = md5($_POST['senha']);
 
     $sql = "INSERT INTO usuarios (nome_usuario, email, senha) VALUES (:nome_usuario, :email, :senha)";
     $stmt = $conn->prepare($sql);
@@ -14,9 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindParam(':senha', $senha);
 
     if ($stmt->execute()) {
-        echo "Usuário cadastrado com sucesso!";
+        echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
     } else {
-        echo "Erro ao cadastrar usuário.";
+        $errorInfo = $stmt->errorInfo();
+        echo "<script>alert('Erro ao cadastrar usuário: {$errorInfo[2]}');</script>";
     }
 }
 ?>
@@ -27,43 +28,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPark - Cadastro e Login</title>
-    <link rel="stylesheet" href="style/style.css?t=<?php echo date('YmdHis').rand(0,999999);?>">
-    <link rel="stylesheet" href="style/cadastro.css?t=<?php echo date('YmdHis').rand(0,999999);?>">
+    <link rel="stylesheet" href="style/style.css?t=<?php echo date('YmdHis') . rand(0, 999999); ?>">
+    <link rel="stylesheet" href="style/cadastro.css?t=<?php echo date('YmdHis') . rand(0, 999999); ?>">
 </head>
 <body>
-    <!-- <header class="header">
-        <div class="logo">iPark</div>
-        <div class="search-container">
-            <input type="text" placeholder="Descubra locais com iPark" class="search-bar">
-            <button class="search-button">
-                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-        </div>
-        <nav class="navbar">
-            <a href="index.php" class="active">Inicio</a>
-            <a href="equipe.php">Equipe</a>
-            <a href="projeto.php">Projeto</a>
-            <a href="cadastro.php" id="botaocadastro">Cadastro</a>
-            <a href="login.php" id="botaologin">Login</a>
-        </nav>
-    </header> -->
-
     <?php include 'includes/header.php'; ?>
 
     <main>
         <div class="container">
             <div class="signup">
                 <h2>Cadastro</h2>
-                <input type="email" placeholder="Digite seu email">
-                <input type="text" placeholder="Digite seu nome de usuário">
-                <input type="password" placeholder="Digite uma senha">
-                <button>Cadastrar-se</button>
+                <form method="POST" action="">
+                    <input type="text" name="nome_usuario" placeholder="Digite seu nome de usuário" required>
+                    <input type="email" name="email" placeholder="Digite seu email" required>
+                    <input type="password" name="senha" placeholder="Digite uma senha" required>
+                    <button type="submit">Cadastrar-se</button>
+                </form>
             </div>
-           
         </div>
     </main>
+
+    <?php include 'includes/footer.php'; ?>
 </body>
-
-<?php include 'includes/footer.php'; ?>
-
 </html>
